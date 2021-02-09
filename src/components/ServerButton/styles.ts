@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { HomeAlt } from 'styled-icons/boxicons-regular';
 
 import { props } from '.'
 
@@ -12,15 +13,12 @@ export const Button = styled.button<props>`
   border-radius:50%;
   margin-bottom: 8px;
   background-color: ${props => 
-  props.isHome ? 'var(--rocketseat)' : 'var(--primary)'};
+  props.isHome ? 'var(--discord)' : 'var(--primary)'};
 
   cursor:pointer;
   position: relative;
   
-  >img{
-    width:24px;
-    height:24px;
-  }
+ 
 
   &::before{
     width:9px;
@@ -56,8 +54,14 @@ export const Button = styled.button<props>`
   transition: border-radius .2s, background-color .2s;
   &.active, &:hover{ 
     border-radius:16px;
-    background-color: ${props => props.isHome ? 'var(--rocketseat)' : 'var(--discord)'};
+    background-color: ${props => props.isHome ? 'var(--discord)' : 'var(--discord)'};
   }
   
 
+`;
+
+export const Home = styled(HomeAlt)`
+    width:24px;
+    height:24px;
+    color: var(--white);
 `;

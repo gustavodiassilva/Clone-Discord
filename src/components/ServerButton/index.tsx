@@ -1,7 +1,6 @@
 import React from 'react';
-import Logo from '../../assets/logo.svg';
 
-import { Button } from './styles';
+import { Button, Home } from './styles';
 
 
 export interface props{
@@ -25,7 +24,7 @@ const ServerButton: React.FC<props> = ({
     mentions={mentions} 
     className={selected ? 'active' : ''}
     >
-      {isHome && <img src={Logo} alt="Home" />}
+      {isHome && <Home />}
     </Button>
   )
   
